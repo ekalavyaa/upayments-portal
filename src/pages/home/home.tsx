@@ -7,6 +7,7 @@ import { Category } from '../../components/category/category';
 import { Option } from '../../components/category/catgory-fetch';
 import { SingleValue } from 'react-select';
 import { FloatingButton } from '../../components/folating-button/floating-button';
+import './home.css';
 
 const Home = () => {
     const isComponentMounted = useRef(true);
@@ -32,11 +33,11 @@ const Home = () => {
     return (
         <React.Fragment>
             <FloatingButton />
-            <div className='flex flex-row justify-between align-middle'>
+            <div className='flex flex-row justify-between align-middle gap-5'>
                 <div className='w-80'><Search search={search} /></div>
                 <div className='w-80'><Category onChange={(label: string, value: SingleValue<Option>) => { search(value?.value as string) }} /> </div>
             </div>
-            <div className='flex flex-row flex-wrap justify-around gap-12 mt-14 px-20'>
+            <div className='product-container flex flex-row flex-wrap justify-around gap-12 mt-14 px-20 relative'>
                 {loading ? (
                     <div>Loading data...</div>
                 ) : (
@@ -46,7 +47,7 @@ const Home = () => {
                 )}
             </div>
 
-        </React.Fragment >
+        </React.Fragment>
     );
 }
 
