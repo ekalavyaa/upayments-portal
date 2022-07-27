@@ -6,4 +6,6 @@
 
 .container {
   top: 150px;
+  overflow-y: auto;
+  height: 80vh;
 }

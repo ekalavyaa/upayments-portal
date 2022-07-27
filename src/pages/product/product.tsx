@@ -23,11 +23,11 @@ const Product = () => {
                     :
                     (
                         <div className='flex flex-wrap flex-col'>
-                            <div className='flex flex-row gap-10'>
+                            <div className='flex flex-row gap-10 flex-wrap'>
                                 <div className='image'>
                                     <img src={data.avatar} alt='product' />
                                 </div>
-                                <div className='flex flex-col justify-between px-10'>
+                                <div className='flex flex-col justify-between'>
                                     <div className='text-4xl'>
                                         {data.name}
                                     </div>
